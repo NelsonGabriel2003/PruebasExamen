@@ -1,0 +1,36 @@
+name: Deploy to GitHub Pages
+
+# Evento que activa el flujo de trabajo 
+on:
+  push:
+    branches:
+      - main
+  # Permite ejecutar manualmente desde la pestaña Actions
+  workflow_dispatch:
+
+# Permisos necesarios para GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Configuración del trabajo
+jobs:
+  # Job de despliegue
+  deploy:
+    # El job se ejecutará en un runner con Ubuntu en su última versión
+    runs-on: ubuntu-latest
+    
+    # Pasos del job
+    steps:
+      # Checkout del código
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      # Desplegar a GitHub Pages usando tu token personalizado
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.PATH_SECRET }}
+          publish_dir: ./  # Carpeta raíz del proyecto (donde está tu index.html)
+          # Si tus archivos HTML están en otra carpeta, cámbialo por ejemplo a: ./src
