@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoGarage - Tu Concesionario de Confianza</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">
+                    <h1>🚗 AutoGarage</h1>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#autos">Autos</a></li>
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+  
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+            <h2>Encuentra el Auto de tus Sueños</h2>
+            <p>La mejor selección de vehículos nuevos y seminuevos</p>
+            <a href="#autos" class="btn-primary">Ver Inventario</a>
+        </div>
+    </section>
+
+    <section class="filters">
+        <div class="container">
+            <h3>Filtrar por Categoría</h3>
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-category="todos">Todos</button>
+                <button class="filter-btn" data-category="sedan">Sedán</button>
+                <button class="filter-btn" data-category="suv">SUV</button>
+                <button class="filter-btn" data-category="deportivo">Deportivo</button>
+                <button class="filter-btn" data-category="pickup">Pickup</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Catálogo de Autos -->
+    <section id="autos" class="catalogo">
+        <div class="container">
+            <h2>Nuestro Inventario</h2>
+            <div id="cars-container" class="cars-grid">
+                <!-- Los autos se cargarán dinámicamente con JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <section id="servicios" class="servicios">
+        <div class="container">
+            <h2>Nuestros Servicios</h2>
+            <div class="servicios-grid">
+                <div class="servicio-card">
+                    <div class="servicio-icon">🔧</div>
+                    <h3>Mantenimiento</h3>
+                    <p>Servicio completo de mantenimiento preventivo y correctivo</p>
+                </div>
+                <div class="servicio-card">
+                    <div class="servicio-icon">💰</div>
+                    <h3>Financiamiento</h3>
+                    <p>Planes de financiamiento flexibles y tasas competitivas</p>
+                </div>
+                <div class="servicio-card">
+                    <div class="servicio-icon">🔄</div>
+                    <h3>Intercambio</h3>
+                    <p>Recibimos tu auto usado como parte de pago</p>
+                </div>
+                <div class="servicio-card">
+                    <div class="servicio-icon">✅</div>
+                    <h3>Garantía</h3>
+                    <p>Todos nuestros vehículos incluyen garantía extendida</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+ 
+    <section id="contacto" class="contacto">
+        <div class="container">
+            <h2>Contáctanos</h2>
+            <div class="contacto-content">
+                <div class="contacto-info">
+                    <h3>Información de Contacto</h3>
+                    <p>📍 Av. Principal 123, Quito, Ecuador</p>
+                    <p>📞 +593 2 123 4567</p>
+                    <p>✉️ info@autogarage.com</p>
+                    <p>🕒 Lun - Sáb: 9:00 AM - 6:00 PM</p>
+                </div>
+                <div class="contacto-form">
+                    <form id="contact-form">
+                        <input type="text" placeholder="Nombre completo" required>
+                        <input type="email" placeholder="Email" required>
+                        <input type="tel" placeholder="Teléfono" required>
+                        <textarea placeholder="Mensaje" rows="5" required></textarea>
+                        <button type="submit" class="btn-primary">Enviar Mensaje</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 AutoGarage. Todos los derechos reservados.</p>
+            <div class="social-links">
+                <a href="#">Facebook</a>
+                <a href="#">Instagram</a>
+                <a href="#">Twitter</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
