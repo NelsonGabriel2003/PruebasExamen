@@ -1,4 +1,4 @@
-name: Deploy to GitHub Pages
+name: Deploy para Produccion
 
 # Evento que activa el flujo de trabajo 
 on:
@@ -31,6 +31,6 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
-          github_token: ${{ secrets.PATH_SECRET }}
+          github_token: ${{ secrets.TOKEN_DEVELOPER }}
           publish_dir: ./  # Carpeta raíz del proyecto (donde está tu index.html)
           # Si tus archivos HTML están en otra carpeta, cámbialo por ejemplo a: ./src
